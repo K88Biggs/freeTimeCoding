@@ -1,4 +1,4 @@
-# Playwright + TypeScript + Percy Visual Testing Scaffold
+# 🎭 Playwright + TypeScript + Percy Visual Testing Scaffold
 
 This project is a clean scaffold for end-to-end testing using [Playwright](https://playwright.dev/), [TypeScript](https://www.typescriptlang.org/), and [Percy](https://percy.io/) for visual testing.
 
@@ -11,7 +11,7 @@ It supports:
 
 ---
 
-##  Getting Started
+## 🚀 Getting Started
 
 ### 1. **Clone the Repository**
 
@@ -90,7 +90,7 @@ docker run -e PERCY_TOKEN=your_percy_token -v ${PWD}:/app percy-playwright-ts
 
 ---
 
-##  Project Structure
+## 📂 Project Structure
 
 ```bash
 .
@@ -108,7 +108,7 @@ docker run -e PERCY_TOKEN=your_percy_token -v ${PWD}:/app percy-playwright-ts
 
 ---
 
-##  Scripts
+## 🧾 Scripts
 
 ```json
 "scripts": {
@@ -121,7 +121,7 @@ docker run -e PERCY_TOKEN=your_percy_token -v ${PWD}:/app percy-playwright-ts
 
 ---
 
-##  Prerequisites
+## ✅ Prerequisites
 
 * Node.js ≥ 18.x
 * Git
@@ -130,16 +130,13 @@ docker run -e PERCY_TOKEN=your_percy_token -v ${PWD}:/app percy-playwright-ts
 
 ---
 
-##  Contributing
+## 🤝 Contributing
 
 Fork, make changes, and submit a pull request. Suggestions and improvements are welcome!
 
 ---
 
-##  License
+## 📄 License
 
 MIT
 
-```
-
----
