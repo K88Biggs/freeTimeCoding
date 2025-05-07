@@ -1,3 +1,31 @@
+# Node dependencies
 node_modules
+npm-debug.log
+yarn.lock
+package-lock.json
+
+# Build output
 dist
+build
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Git
+.git
+.gitignore
+
+# IDEs and editors
+.vscode
+.idea
+
+# Logs
 *.log
+
+# Docker files
+Dockerfile
+.dockerignore
+
+# Percy snapshots/cache
+.percy
