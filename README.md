@@ -97,6 +97,9 @@ docker run -e PERCY_TOKEN=your_percy_token -v ${PWD}:/app percy-playwright-ts
 ├── tests/                  # All Playwright test specs
 │   ├── example.spec.ts
 │   └── visual.spec.ts
+├── pages/                  
+│   ├── modernLoginPage.spec.ts
+│   └── setPassword.spec.ts
 ├── playwright.config.ts   # Playwright configuration
 ├── tsconfig.json          # TypeScript configuration
 ├── Dockerfile             # Docker setup
