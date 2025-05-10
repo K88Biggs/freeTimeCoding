@@ -11,7 +11,7 @@ export class ModernLoginPage {
 
   constructor(page: Page) {
     this.page = page;
-    this.emailInput = page.locator('input[type="email"]');
+    this.emailInput = page.locator('input[inputmode="email"]');
     this.continueButton = page.locator('button:has-text("Continue")');
     this.googleButton = page.locator('button:has-text("Continue with Google")');
     this.facebookButton = page.locator('button:has-text("Continue with Facebook")');
