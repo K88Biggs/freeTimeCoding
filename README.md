@@ -121,7 +121,11 @@ docker run -e PERCY_TOKEN=your_percy_token -v ${PWD}:/app percy-playwright-ts
 
 ---
 
+<<<<<<< HEAD
 ## Prerequisites
+=======
+## ✅ Prerequisites
+>>>>>>> 7fe4b1c4dbaa1d24ba115e0f033ba1301e42cbc6
 
 * Node.js ≥ 18.x
 * Git
@@ -140,4 +144,7 @@ Fork, make changes, and submit a pull request. Suggestions and improvements are 
 
 MIT
 
+<<<<<<< HEAD
 # freeTimeCoding
+=======
+>>>>>>> 7fe4b1c4dbaa1d24ba115e0f033ba1301e42cbc6
