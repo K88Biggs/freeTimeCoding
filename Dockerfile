@@ -1,11 +1,6 @@
 # Base image with Node and Playwright dependencies
-<<<<<<< HEAD
 
 FROM mcr.microsoft.com/playwright:v1.52.0-jammy
-=======
-FROM mcr.microsoft.com/playwright:v1.52.0-jammy
-
->>>>>>> fa1def9 (Updated Dockerfile and .env)
 
 # Set working directory
 WORKDIR /playwright-ts-scaffold
