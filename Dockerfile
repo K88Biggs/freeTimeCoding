@@ -2,7 +2,7 @@
 <<<<<<< HEAD
 FROM mcr.microsoft.com/playwright:v1.52.0-jammy
 =======
-FROM mcr.microsoft.com/playwright:v1.43.1-jammy
+FROM mcr.microsoft.com/playwright:v1.53.0-jammy
 >>>>>>> 7fe4b1c4dbaa1d24ba115e0f033ba1301e42cbc6
 
 # Set working directory
