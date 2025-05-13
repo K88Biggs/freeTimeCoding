@@ -57,6 +57,8 @@ npx playwright test tests/login.spec.ts
 ```bash
 npx playwright show-report
 ```
+✅ Test Coverage
+tests/login.spec.ts — Hudl Login Page Tests
 | Test Description                                                            | Status |
 | --------------------------------------------------------------------------- | ------ |
 | ✅ should load login page                                                    | Passed |
