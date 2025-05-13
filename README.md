@@ -24,7 +24,7 @@ This repository contains an automated testing framework built using [Playwright]
 
 ## 🚀 Getting Started
 
-### 1. Install Dependencies
+### 1. Install Node Dependencies
 
 ```bash
 npm install
@@ -57,8 +57,10 @@ npx playwright test tests/login.spec.ts
 ```bash
 npx playwright show-report
 ```
+
 ✅ Test Coverage
-tests/login.spec.ts — Hudl Login Page Tests
+`tests/login.spec.ts — Hudl Login Page Tests`
+
 | Test Description                                                            | Status |
 | --------------------------------------------------------------------------- | ------ |
 | ✅ should load login page                                                    | Passed |
@@ -144,16 +146,31 @@ dotnet run
 
 This repo includes a Dockerfile for containerized test execution.
 
-### Build the Image
+### 🔧 Install Docker
+
+* **macOS/Windows**: [Download Docker Desktop](https://www.docker.com/products/docker-desktop/)
+* **Linux**: Follow [Docker Engine installation guide](https://docs.docker.com/engine/install/)
+
+### 🛠️ Docker Build & Run
+
+#### Build the Docker Image
 
 ```bash
 docker build -t playwright-tests .
 ```
 
-### Run Tests in Container
+#### Run Tests in Container
 
 ```bash
 docker run --rm playwright-tests
+```
+
+### 🗂️ Mount Local Test Results (Optional)
+
+To access test results on your local machine:
+
+```bash
+docker run --rm -v $(pwd)/test-results:/app/test-results playwright-tests
 ```
 
 ---
@@ -173,4 +190,6 @@ npx playwright install
 ## 🔒 License
 
 This project is for internal/demo purposes. No open-source license attached.
+
 ```
+
