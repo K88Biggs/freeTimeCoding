@@ -1,6 +1,10 @@
 import { defineConfig } from '@playwright/test';
 
 export default defineConfig({
+  reporter: [
+    ['html', { open: 'never', outputFolder: 'playwright-report' }],
+    ['list'], // Optional: shows results in console
+  ],
   testDir: './tests',
   use: {
     headless: true,
