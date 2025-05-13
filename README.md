@@ -1,8 +1,3 @@
-Here’s the updated `README.md` with a \*\*`.NET SDK installation and configuration section** included — useful if you're integrating Playwright with a .NET backend or tools like `ReportPortal`, `SpecFlow\`, or testing APIs in a hybrid setup.
-
----
-
-```markdown
 # 🧪 Playwright Test Automation Framework (TypeScript)
 
 This repository contains an automated testing framework built using [Playwright](https://playwright.dev/) and TypeScript. It follows the **Page Object Model (POM)** pattern and includes tests for Hudl’s login functionality across devices and social login buttons.
