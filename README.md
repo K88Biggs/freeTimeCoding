@@ -173,10 +173,4 @@ npx playwright install
 ## 🔒 License
 
 This project is for internal/demo purposes. No open-source license attached.
-
-```
-
----
-
-Let me know if you want to add **.NET project references**, **API integration tests**, or **CI pipeline steps using .NET CLI** (e.g., in Azure DevOps or GitHub Actions).
 ```
