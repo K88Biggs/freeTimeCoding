@@ -67,4 +67,15 @@ if (!email || !password) {
 await page.waitForTimeout(3000); // 3000 milliseconds = 3 seconds
     await percySnapshot(page, 'Login Page - Homepage');
 });
+/*  test('All elements render on mobile viewport', async ({ page, browserName }) => {
+    await page.setViewportSize({ width: 375, height: 812 });
+const loginPage = new LoginPage(page, browserName);
+    await loginPage.goto();
+    await expect(loginPage.emailInput).toBeVisible();
+    await expect(loginPage.continueButton).toBeVisible();
+    await expect(loginPage.googleButton).toBeVisible();
+    await expect(loginPage.facebookButton).toBeVisible();
+    await expect(loginPage.appleButton).toBeVisible();
+    await percySnapshot(page, 'Mobile View - Login Form');
+*/  
 });

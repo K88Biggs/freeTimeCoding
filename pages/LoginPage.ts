@@ -16,6 +16,8 @@ export class LoginPage {
     this.emailInput = page.locator('#username');
     this.continueButton = page.locator('[data-action-button-primary="true"]');
     this.googleButton = page.locator('[data-provider="google"]');
+    this.facebookButton = page.locator('[data-provider="facebook"]');
+    this.appleButton = page.locator('[data-provider="apple"]');
     this.passwordInput = page.locator('#password');
     this.usernameErrorIcon = page.locator('span.ulp-input-error-icon'); // Defining the locator
     this.usernameErrorMessage = page.locator('#error-element-username'); // Using the ID of the parent

@@ -9,9 +9,9 @@
     "outDir": "dist"                            // (Optional) Compiled JS files go here
   },
   "include": [
-   "tests/**/*.ts", 
+   "tests", 
    "playwright.config.ts",
-   "pages/**/*.ts",  
+   "pages",  
    ".env"
 ]  // Tell TypeScript what files to compile
 }
