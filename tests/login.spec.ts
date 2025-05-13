@@ -15,7 +15,7 @@ test.describe('Hudl Login Page Tests', () => {
     const loginPage = new LoginPage(page, browserName);
     await loginPage.goto();
     await expect(loginPage.emailInput).toBeVisible();
-    await percySnapshot(page, 'Login Page Default');
+    await percySnapshot(page, 'Login Page Default - ${browserName}');
   });
 
   test('should show error for invalid email format', async ({ page, browserName }) => {
@@ -25,7 +25,7 @@ test.describe('Hudl Login Page Tests', () => {
     await loginPage.submit();
     const validationMessage = await loginPage.emailInput.evaluate(input => input.validationMessage);
     expect(validationMessage).toContain('');
-    await percySnapshot(page, 'Login Page - Invalid Email Error');
+    await percySnapshot(page, 'Login Page - Invalid Email Error - ${browswerName}');
   });
 
   test('should accept valid email and proceed', async ({ page, browserName }) => {
@@ -40,7 +40,8 @@ test('should verify the password input is visible after providing a valid email'
   // Navigate to the page containing the password
   const loginPage = new LoginPage(page, browserName);
   await loginPage.goto();
-  await loginPage.enterEmail('test@example.com');
+    await percySnapshot(page, 'Login Page - Password is NOT visible');  
+await loginPage.enterEmail('test@example.com');
   await loginPage.submit();  
 // --- Locate the element ---
   const passwordInput = page.locator('#password');
@@ -48,9 +49,10 @@ test('should verify the password input is visible after providing a valid email'
   // --- Verify Visibility ---
   await expect(passwordInput).toBeVisible();
   console.log('Password input field is visible.');
+    await percySnapshot(page, 'Login Page - Password is visible');
 });
-test('should log in with valid credentials', async ({ page }) => {
-  const loginPage = new LoginPage(page);
+test('should log in with valid credentials', async ({ page, browserName }) => {
+  const loginPage = new LoginPage(page, browserName);
   await loginPage.goto();
 
   const email = process.env.EMAIL!;
@@ -61,6 +63,8 @@ if (!email || !password) {
   await loginPage.login(email, password);
   await loginPage.submit();
   // Add assertion for successful login here
-  await expect(page).toHaveURL(/.*hudl|home/i); // adjust for Hudl
+  await expect(page).toHaveURL(/.*hudl|home/i); //
+await page.waitForTimeout(3000); // 3000 milliseconds = 3 seconds
+    await percySnapshot(page, 'Login Page - Homepage');
 });
 });
