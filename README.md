@@ -61,12 +61,12 @@ npx playwright show-report
 ✅ Test Coverage
 `tests/login.spec.ts — Hudl Login Page Tests`
 
-| Test Description                                                            | Status |
-| --------------------------------------------------------------------------- | ------ |
+| Test Description                                                             | Status |
+| ---------------------------------------------------------------------------  | ------ |
 | ✅ should load login page                                                    | Passed |
 | ✅ should show error for invalid email format                                | Passed |
 | ✅ should accept valid email and proceed                                     | Passed |
-| ✅ should verify the password input is visible after providing a valid email | Passed |
+| ✅ should verify the password field is visible after providing a valid email | Passed |
 | ✅ should log in with valid credentials                                      | Passed |
 
 ---
