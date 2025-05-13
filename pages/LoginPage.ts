@@ -2,16 +2,24 @@ import { Page, Locator } from '@playwright/test';
 
 export class LoginPage {
   readonly page: Page;
+  readonly browserName: string;
   readonly emailInput: Locator;
   readonly continueButton: Locator;
+  readonly googleButton: Locator;
+  readonly passwordInput: Locator; 
   readonly usernameErrorMessage: Locator; // Locator for the parent error message element
+  readonly inputField: Locator;
 
-  constructor(page: Page) {
+  constructor(page: Page, browserName: string) {
     this.page = page;
+    this.browserName = browserName;
     this.emailInput = page.locator('#username');
     this.continueButton = page.locator('[data-action-button-primary="true"]');
+    this.googleButton = page.locator('[data-provider="google"]');
+    this.passwordInput = page.locator('#password');
     this.usernameErrorIcon = page.locator('span.ulp-input-error-icon'); // Defining the locator
     this.usernameErrorMessage = page.locator('#error-element-username'); // Using the ID of the parent
+    this.inputField = page.locator('input.hide');
   }
 
   async goto() {
@@ -38,4 +46,21 @@ async attemptLoginWithEmptyUsername() {
   async isUsernameErrorIconVisible() {
     return await this.usernameErrorIcon.isVisible();
   }
+async snapshot(label: string) {
+    await percySnapshot(this.page, `${label} - ${this.browserName}`);
+  }
+async login(email: string, password: string) {
+    await this.enterEmail(email);
+    await this.continueButton.click();
+    await this.passwordInput.fill(password);
+    await this.continueButton.click();
+  }
+async validateFieldIsHidden(page: Page) {
+  // Check if the element is not visible based on computed styles
+  await expect(inputField).not.toBeVisible();
+}
+ async enterPassword(password: string) {
+    await expect(this.passwordInput).toBeVisible();
+    await expect(this.passwordInput).toBeEnabled();
+}
 }

@@ -8,5 +8,10 @@
     "forceConsistentCasingInFileNames": true,   // Prevent case mismatch bugs
     "outDir": "dist"                            // (Optional) Compiled JS files go here
   },
-  "include": ["tests", "playwright.config.ts"]  // Tell TypeScript what files to compile
+  "include": [
+   "tests/**/*.ts", 
+   "playwright.config.ts",
+   "pages/**/*.ts",  
+   ".env"
+]  // Tell TypeScript what files to compile
 }

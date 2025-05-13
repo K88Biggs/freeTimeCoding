@@ -16,5 +16,8 @@
     "@percy/playwright": "^1.0.8",
     "@playwright/test": "^1.52.0",
     "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "dotenv": "^16.5.0"
   }
 }
